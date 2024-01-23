@@ -1,0 +1,91 @@
+.main{
+	@import '../styles/globals.scss';
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	> div{
+		width: 100%;
+		height: 100%;
+		background-color: #17171C;
+		max-width: 48rem;
+		max-height: 64rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		> div:first-child{
+			width: calc(100% - 2.5rem);
+			height: 100%;
+
+			> div:first-child{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+
+				> .dark{
+					width: 4.5rem;
+					height: 2rem;
+					background-color: #2E2F38;
+					border-radius: 1rem;
+					display: flex;
+					align-items: center;
+					padding: 0;
+					cursor: pointer;
+					border: none;
+					margin-top: 3.75rem;
+
+					> div{
+						margin: .25rem;
+						width: 1.5rem;
+						height: 1.5rem;
+						border-radius: 50%;
+						background-color: #4E505F;
+						transition: all 0.3s;
+					}
+				}
+
+				> .light{
+					width: 4.5rem;
+					height: 2rem;
+					background-color: #2E2F38;
+					border-radius: 1rem;
+					display: flex;
+					align-items: center;
+					padding: 0;
+					cursor: pointer;
+					border: none;
+					margin-top: 3.75rem;
+
+					> div{
+						margin: .25rem;
+						width: 1.5rem;
+						height: 1.5rem;
+						border-radius: 50%;
+						background-color: #4E505F;
+						transition: all 0.3s;
+						margin-left: 2.75rem;
+					}
+				}
+			}
+
+			> div:nth-child(2){
+				width: 100%;
+				height: 100%;
+				max-height: 18.75rem;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+
+				> span{
+					color: #747477;
+					font-family: $work;
+					font-size: 2.5rem;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
