@@ -1,14 +1,15 @@
-.main{
+.mainDark{
 	@import '../styles/globals.scss';
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #17171C;
+
 
 	> div{
 		width: 100%;
-		height: 100%;
 		background-color: #17171C;
 		max-width: 48rem;
 		max-height: 64rem;
@@ -18,7 +19,7 @@
 
 		> div:first-child{
 			width: calc(100% - 2.5rem);
-			height: 100%;
+			height: 50vh;
 
 			> div:first-child{
 				width: 100%;
@@ -36,6 +37,9 @@
 					cursor: pointer;
 					border: none;
 					margin-top: 3.75rem;
+					background-repeat: no-repeat;
+					background-position: 2.75rem center;
+					background-image: url(./sun.svg);
 
 					> div{
 						margin: .25rem;
@@ -46,11 +50,121 @@
 						transition: all 0.3s;
 					}
 				}
+			}
+
+			> div:nth-child(2){
+				width: 100%;
+				max-height: 18.75rem;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				margin-top: 12rem;
+
+				> span{
+					color: #747477;
+					font-family: $work;
+					font-size: 2.5rem;
+					font-weight: 300;
+					min-height: 2.9375rem;
+					min-width: 1px;
+				}
+			}
+
+			> div:nth-child(3){
+				height: 6rem;
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				margin-bottom: 6rem;
+
+				> span{
+					color: #fff;
+					font-size: 6rem;
+					font-family: $work;
+					font-weight: 300;
+				}
+			}
+		}
+
+		> div:nth-child(2){
+			width: 100%;
+			height: calc(50vh - 4rem);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1rem;
+
+			> button{
+				width: 10.625rem;
+				height: 4.5rem;
+				color: white;
+				font-size: 2rem;
+				font-family: $work;
+				font-weight: 400;
+				background-color: #2E2F38;
+				border-radius: 1.5rem;
+				border: none;
+				cursor: pointer;
+			}
+
+			> button:nth-child(1), > button:nth-child(2), > button:nth-child(3){
+				background-color: #4E505F;
+			}
+			
+			> button:nth-child(4), > button:nth-child(8), > button:nth-child(12), > button:nth-child(16), > button:nth-child(20){
+				background-color: #4B5EFC;
+			}
+		}
+
+		> div:last-child{
+			height: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			> div{
+				width: 8.375rem;
+				height: 0.3125rem;
+				background-color: white;
+				border-radius: 0.3125rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+.main{
+	@import '../styles/globals.scss';
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F1F2F3;
+
+	> div{
+		width: 100%;
+		background-color: #F1F2F3;
+		max-width: 48rem;
+		max-height: 64rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		> div:first-child{
+			width: calc(100% - 2.5rem);
+			height: 50vh;
+
+			> div:first-child{
+				width: 100%;
+				display: flex;
+				justify-content: center;
 
 				> .light{
 					width: 4.5rem;
 					height: 2rem;
-					background-color: #2E2F38;
+					background-color: #fff;
 					border-radius: 1rem;
 					display: flex;
 					align-items: center;
@@ -58,13 +172,16 @@
 					cursor: pointer;
 					border: none;
 					margin-top: 3.75rem;
+					background-image: url(./moon.svg);
+					background-repeat: no-repeat;
+					background-position: .25rem center;
 
 					> div{
 						margin: .25rem;
 						width: 1.5rem;
 						height: 1.5rem;
 						border-radius: 50%;
-						background-color: #4E505F;
+						background-color: #D2D3DA;
 						transition: all 0.3s;
 						margin-left: 2.75rem;
 					}
@@ -73,18 +190,82 @@
 
 			> div:nth-child(2){
 				width: 100%;
-				height: 100%;
 				max-height: 18.75rem;
 				display: flex;
 				justify-content: flex-end;
 				align-items: flex-end;
+				margin-top: 12rem;
 
 				> span{
-					color: #747477;
+					color: #919192;
 					font-family: $work;
 					font-size: 2.5rem;
 					font-weight: 300;
+					min-height: 2.9375rem;
+					min-width: 1px;
 				}
+			}
+
+			> div:nth-child(3){
+				height: 6rem;
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				margin-bottom: 6rem;
+
+				> span{
+					color: #000;
+					font-size: 6rem;
+					font-family: $work;
+					font-weight: 300;
+				}
+			}
+		}
+
+		> div:nth-child(2){
+			width: 100%;
+			height: calc(50vh - 4rem);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1rem;
+
+			> button{
+				width: 10.625rem;
+				height: 4.5rem;
+				color: black;
+				font-size: 2rem;
+				font-family: $work;
+				font-weight: 400;
+				background-color: #fff;
+				border-radius: 1.5rem;
+				border: none;
+				cursor: pointer;
+			}
+
+			> button:nth-child(1), > button:nth-child(2), > button:nth-child(3){
+				background-color: #D2D3DA;
+			}
+			
+			> button:nth-child(4), > button:nth-child(8), > button:nth-child(12), > button:nth-child(16), > button:nth-child(20){
+				background-color: #4B5EFC;
+				color: white;
+			}
+		}
+
+		> div:last-child{
+			height: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			> div{
+				width: 8.375rem;
+				height: 0.3125rem;
+				background-color: black;
+				border-radius: 0.3125rem;
+				margin-bottom: 1rem;
 			}
 		}
 	}
